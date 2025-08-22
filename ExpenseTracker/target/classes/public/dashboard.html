@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="Expense-management-best-pactices.png" title=" Expense Tracker 👜"style="height: 50px; vertical-align: middle;">
+    </header>
+    <div class="input-boxes">
+        <input id="amount" type="number" placeholder="Enter amount">
+        <input id="type" type="text" placeholder="Type (Income or Expense)">
+        <input id="date" type="date">
+        <button onclick="addTransaction()">➕ Add</button>
+    </div>
+    <div class="summary">
+        <div class="card income">Total Income 🪙<br><span id="income">₹0</span></div>
+        <div class="card expense">Total Expense 🧾<br><span id="expense">₹0</span></div>
+        <div class="card balance">Balance 💰<br><span id="balance">₹0</span></div>
+    </div>
+
+    <table>
+        <thead>
+            <tr><th>Amount</th><th>Type</th><th>Date</th><th>Action</th></tr>
+        </thead>
+        <tbody id="transactions"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

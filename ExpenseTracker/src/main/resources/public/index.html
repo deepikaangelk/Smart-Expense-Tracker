@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Expense Tracker Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h1>Hello 👋, please enter your <br><span class="highlight">Name</span></h1>
+    <input type="text" placeholder="Name Here" id="nameInput" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <script>
+    function login() {
+      const name = document.getElementById("nameInput").value;
+      if (name.trim() !== "") {
+        // Optionally store name in localStorage
+        localStorage.setItem("username", name);
+        // Redirect to dashboard
+        window.location.href = "/dashboard.html";
+      } else {
+        alert("Please enter your name!");
+      }
+    }
+  </script>
+</body>
+</html>
+
